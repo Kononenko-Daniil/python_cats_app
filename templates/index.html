@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cats_Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body style="background-color:#282827;">
+        <div>
+            <div class="container-fluid" style=
+                "height: 250px;
+                background-color: rgb(31, 29, 29);">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="cal-sm" style="width: 280px"></div>
+                        <div class="cal-sm" style="height: 200px"><label style=
+                            "height: 100px;
+                            font-size: 150px;
+                            font-weight: lighter; 
+                            color: white;">
+                            Cats Site</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="height: 60px; background-color: #424242">
+                <div class="container">
+                    <h1 style="height: 10px"></h1>
+                    <div class="row">
+                        <h1 style="color: white; font-size: 20px"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 style="height: 10px"></h1>
+            <div className="container-fluid">
+                {% for cats in catsArray %}
+                    <div class="row text-center" style=" width: 1400px;  text-align: center;">
+                        <div class="cal-sm" style="width: 200px;"></div>
+                        {% for cat in cats %}
+                            <div className="cal-sm" style="text-align: center;
+                                                            width: 360px;
+                                                            background-color: rgb(67, 66, 68);
+                                                            border: 2px solid rgb(23, 23, 24);
+                                                            border-radius: 10px;
+                                                            height: 375px;
+                                                            margin: 10px;">
+                                <h1 style="height: 5px"></h1>
+                                <img src= {{ cat.url }} style="height: 300px;
+                                width: 300px;"></img>
+                                <h2 style="font-weight: lighter; color: white">Name: {{ cat.name }}</h2>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+    </body>
+</html>
